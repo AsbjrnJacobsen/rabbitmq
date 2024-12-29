@@ -1,0 +1,5 @@
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Consumer\obj\Debug\net7.0\Consumer.csproj.AssemblyReference.cache
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Consumer\obj\Debug\net7.0\Consumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Consumer\obj\Debug\net7.0\Consumer.AssemblyInfoInputs.cache
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Consumer\obj\Debug\net7.0\Consumer.AssemblyInfo.cs
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Consumer\obj\Debug\net7.0\Consumer.csproj.CoreCompileInputs.cache
