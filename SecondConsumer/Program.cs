@@ -15,7 +15,9 @@ using var connection = factory.CreateConnection();
 
 using var channel = connection.CreateModel();
 
-channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);
+
+channel.ExchangeDeclare(exchange: "myroutingexchange", type: ExchangeType.Direct);
+
 
 var queName = channel.QueueDeclare().QueueName;
 
