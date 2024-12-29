@@ -15,23 +15,22 @@ using var connection = factory.CreateConnection();
 
 using var channel = connection.CreateModel();
 
-channel.QueueDeclare(queue: "letterbox", durable: false, exclusive: false, autoDelete: false, arguments: null);
-//channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);
+
+var queName = channel.QueueDeclare().QueueName;
 
 var consumer = new EventingBasicConsumer(channel);
 
-var random = new Random();
+channel.QueueBind(queue: queName, exchange: "pubsub", routingKey: "");
 
 consumer.Received += (model, ea) =>
 {
-    var processingTime = random.Next(1, 6);
     var body = ea.Body.ToArray();
     var message = Encoding.UTF8.GetString(body);
-    Console.WriteLine($"Received: {message} which will take {processingTime} to process");
-    Task.Delay(TimeSpan.FromSeconds(processingTime)).Wait();
-    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+    Console.WriteLine($"FirstConsumer - Received: {message}");
 };
 
-channel.BasicConsume(queue: "letterbox", autoAck: false, consumer: consumer);
+channel.BasicConsume(queue: queName, autoAck: true, consumer: consumer);
 
+Console.WriteLine("Consuming...");
 Console.ReadKey();

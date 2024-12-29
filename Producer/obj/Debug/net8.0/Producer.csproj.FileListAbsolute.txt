@@ -15,3 +15,4 @@ C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Producer\obj\Deb
 C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Producer\obj\Debug\net8.0\Producer.pdb
 C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Producer\obj\Debug\net8.0\Producer.genruntimeconfig.cache
 C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Producer\obj\Debug\net8.0\ref\Producer.dll
+C:\Users\45306\Desktop\Studie\Databases for Developers\rabbitmq\Producer\obj\Debug\net8.0\Producer.sourcelink.json
