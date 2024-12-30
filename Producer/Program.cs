@@ -15,11 +15,21 @@ using var connection = factory.CreateConnection();
 
 using var channel = connection.CreateModel();
 
-channel.ExchangeDeclare(exchange: "myroutingexchange", type: ExchangeType.Direct);
+channel.ExchangeDeclare(exchange: "mytopicexchange", type: ExchangeType.Topic);
 
-var message = "This message needs to be routed.";
+var userPaymentsMessage = "A european user paid for something.";
 
-var body = Encoding.UTF8.GetBytes(message);
+var userPaymentbody = Encoding.UTF8.GetBytes(userPaymentsMessage);
 
-channel.BasicPublish("myroutingexchange", "paymentsonly", null, body);
-Console.WriteLine($"Send msg: {message}");
+channel.BasicPublish("mytopicexchange", "user.europe.payments", null, userPaymentbody);
+
+Console.WriteLine($"Send msg: {userPaymentbody}");
+
+
+var businessPaymentsMessage = "A european business paid for something.";
+
+var businessPaymentbody = Encoding.UTF8.GetBytes(businessPaymentsMessage);
+
+channel.BasicPublish("mytopicexchange", "business.europe.payments", null, businessPaymentbody);
+
+Console.WriteLine($"Send msg: {businessPaymentbody}");

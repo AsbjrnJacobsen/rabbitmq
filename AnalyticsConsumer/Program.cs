@@ -15,11 +15,11 @@ using var connection = factory.CreateConnection();
 
 using var channel = connection.CreateModel();
 
-channel.ExchangeDeclare(exchange: "myroutingexchange", ExchangeType.Direct);
+channel.ExchangeDeclare(exchange: "mytopicexchange", ExchangeType.Topic);
 
 var queName = channel.QueueDeclare().QueueName;
 
-channel.QueueBind(queue: queName, exchange: "myroutingexchange", routingKey: "analyticsonly");
+channel.QueueBind(queue: queName, exchange: "mytopicexchange", routingKey: "*.europe.*");
 
 var consumer = new EventingBasicConsumer(channel);
 

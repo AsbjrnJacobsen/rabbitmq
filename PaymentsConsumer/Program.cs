@@ -15,11 +15,11 @@ using var connection = factory.CreateConnection();
 
 using var channel = connection.CreateModel();
 
-channel.ExchangeDeclare(exchange: "myroutingexchange", type: ExchangeType.Direct);
+channel.ExchangeDeclare(exchange: "mytopicexchange", type: ExchangeType.Topic);
 
 var queName = channel.QueueDeclare().QueueName;
 
-channel.QueueBind(queue: queName, exchange: "myroutingexchange", routingKey: "paymentsonly");
+channel.QueueBind(queue: queName, exchange: "mytopicexchange", routingKey: "#.payments");
 
 var consumer = new EventingBasicConsumer(channel);
 

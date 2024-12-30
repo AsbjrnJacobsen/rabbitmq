@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsConsumer", "Analyt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentsConsumer", "PaymentsConsumer\PaymentsConsumer.csproj", "{EC33E02C-F645-471B-9B9F-6D4B10CA06FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserConsumer", "UserConsumer\UserConsumer.csproj", "{4E782DB2-020F-4422-A947-DDFF91776CE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{EC33E02C-F645-471B-9B9F-6D4B10CA06FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC33E02C-F645-471B-9B9F-6D4B10CA06FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC33E02C-F645-471B-9B9F-6D4B10CA06FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E782DB2-020F-4422-A947-DDFF91776CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E782DB2-020F-4422-A947-DDFF91776CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E782DB2-020F-4422-A947-DDFF91776CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E782DB2-020F-4422-A947-DDFF91776CE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
