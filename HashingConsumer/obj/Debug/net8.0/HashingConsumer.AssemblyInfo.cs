@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HashingConsumer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d049f64a73606c9b3292fb2498bddefdeeb45d77")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcf830a8079b8d24f1084404981e1e904f5c0313")]
 [assembly: System.Reflection.AssemblyProductAttribute("HashingConsumer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HashingConsumer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
